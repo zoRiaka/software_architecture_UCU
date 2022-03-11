@@ -35,3 +35,5 @@ Messages you send will be stored by logging service in local dictionary.
 You can view all of them by sending GET request to the facade service.
 
 ## Results:
+
+See results in lab1_Herman.pdf
