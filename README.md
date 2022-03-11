@@ -23,7 +23,7 @@ To send POST/GET requests using curl execute:
 curl -X POST [url] -d [message body]
 
 # example:
-curl -X POST http://127.0.0.1:8080/facade -d "First message: Hello"
+curl -X POST http://127.0.0.1:8080/facade -d "Message N1: This is the first message."
 ```
 ```
 curl -X GET [url]
