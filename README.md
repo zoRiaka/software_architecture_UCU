@@ -1,4 +1,4 @@
-# Lab3: 3 - Microservices with Hazelcast
+# Lab3: Microservices with Hazelcast
 
 ## Requirments:
 to install requirements throught requirements.txt run:
