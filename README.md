@@ -1,4 +1,4 @@
-# Lab1: Basic architecture of the micro-services
+# Lab3: 3 - Microservices with Hazelcast
 
 ## Requirments:
 to install requirements throught requirements.txt run:
