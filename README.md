@@ -1,4 +1,4 @@
-# Lab1: Basic architecture of the micro-services
+# Lab4: Microservices with Message Queue
 
 ## Requirments:
 to install requirements throught requirements.txt run:
@@ -21,16 +21,19 @@ docker run     --name my-third-member --network hazelcast-network     -e HZ_CLUS
 You can run the services separately by executing:
 
 ```
-python facade_app.py [all the ports that are being used for logging services]
+python facade_app.py [list of all the ports that are being used for logging services] [list of all the ports that are being used for messages services]
 python logging_app.py [ip address of the cluster member to which you wish to connect] [port to use]
-python messages_app.py
+python messages_app.py [ip address of the cluster member to which you wish to connect] [port to use]
 
 # EXAMPLE:
-python logging_app.py 172.19.0.2:5701 8000
-python logging_app.py 172.19.0.3:5701 8001
-python logging_app.py 172.19.0.4:5701 8002  # all three from the seperate terminals
+python logging_app.py 172.28.0.2:5701 8000
+python logging_app.py 172.28.0.3:5701 8001
+python logging_app.py 172.28.0.4:5701 8002  # all three from the seperate terminals
 
-python facade_app.py 8000 8001 8002
+python messages_app.py 172.28.0.2:5701 8800
+python messages_app.py 172.28.0.3:5701 8801
+
+python facade_app.py [8000,8001,8002] [8800,8801]
 ```
 
 To send POST/GET requests using curl execute:
@@ -47,7 +50,7 @@ curl -X GET [url]
 # example:
 curl -X GET http://127.0.0.1:8888/facade
 ```
-Messages you send will be stored by logging service in HazelCast distributed map.
+Messages you send will be stored by logging service in HazelCast distributed map and also in distributed queue by facade service and later in local memory of messages service
 You can view all of them by sending GET request to the facade service.
 
 ## Results:
