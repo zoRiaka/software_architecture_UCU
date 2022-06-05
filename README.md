@@ -30,7 +30,7 @@ python config.py
 ```
 Then, run multiple instances of the servers.
 
-Please note that in order for the requests to work correctly you would neet to firstly connect to logging and messages services and only after that to the facade service.
+Please note that in order for the requests to work correctly you would need to firstly connect to logging and messages services and only after that to the facade service.
 
 You can run the services separately by executing:
 
